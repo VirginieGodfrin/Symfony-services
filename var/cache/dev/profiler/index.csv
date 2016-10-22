@@ -1,1 +1,12 @@
 111b46,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/,1477072194,,200
+ebca0f,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/,1477139225,,200
+984d8f,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus,1477139260,,200
+b08161,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena,1477139361,,200
+399c13,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139365,,200
+8fb2d0,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139366,,200
+dbea77,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139368,,200
+1aedda,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139370,,200
+605d9a,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139372,,200
+60782e,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139374,,200
+38a70b,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139376,,200
+1829e8,::1,GET,http://localhost:8888/symfo_services/web/app_dev.php/genus/Balaena/notes,1477139378,,200
