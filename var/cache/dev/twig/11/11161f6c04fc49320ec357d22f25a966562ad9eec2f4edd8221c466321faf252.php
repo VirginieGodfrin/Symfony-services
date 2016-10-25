@@ -23,33 +23,33 @@ class __TwigTemplate_0a2cb09ffbe3d0cd328112b18f3f185c8b827b55479be0160c54ddb5ed1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d5151dfe848508e5ba852c80bce945eedc5f3e4f161e5ffed1d540c9a52213e8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d5151dfe848508e5ba852c80bce945eedc5f3e4f161e5ffed1d540c9a52213e8->enter($__internal_d5151dfe848508e5ba852c80bce945eedc5f3e4f161e5ffed1d540c9a52213e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "genus/show.html.twig"));
+        $__internal_d63d31bce932a8833289fba41bf6f6b3b12a99023b1d25a2974d59f4edcc16b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d63d31bce932a8833289fba41bf6f6b3b12a99023b1d25a2974d59f4edcc16b2->enter($__internal_d63d31bce932a8833289fba41bf6f6b3b12a99023b1d25a2974d59f4edcc16b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "genus/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d5151dfe848508e5ba852c80bce945eedc5f3e4f161e5ffed1d540c9a52213e8->leave($__internal_d5151dfe848508e5ba852c80bce945eedc5f3e4f161e5ffed1d540c9a52213e8_prof);
+        $__internal_d63d31bce932a8833289fba41bf6f6b3b12a99023b1d25a2974d59f4edcc16b2->leave($__internal_d63d31bce932a8833289fba41bf6f6b3b12a99023b1d25a2974d59f4edcc16b2_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a98150812946172e5ff5e28fedad4b0409e33c3840f1ddf10059b9d0429e5ef0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a98150812946172e5ff5e28fedad4b0409e33c3840f1ddf10059b9d0429e5ef0->enter($__internal_a98150812946172e5ff5e28fedad4b0409e33c3840f1ddf10059b9d0429e5ef0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_86f5bf9d0177a1ea55cd46fe410121a894719a09765170a5bc88c46e1e8bde9b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_86f5bf9d0177a1ea55cd46fe410121a894719a09765170a5bc88c46e1e8bde9b->enter($__internal_86f5bf9d0177a1ea55cd46fe410121a894719a09765170a5bc88c46e1e8bde9b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Genus ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["genus"]) ? $context["genus"] : $this->getContext($context, "genus")), "name", array()), "html", null, true);
         
-        $__internal_a98150812946172e5ff5e28fedad4b0409e33c3840f1ddf10059b9d0429e5ef0->leave($__internal_a98150812946172e5ff5e28fedad4b0409e33c3840f1ddf10059b9d0429e5ef0_prof);
+        $__internal_86f5bf9d0177a1ea55cd46fe410121a894719a09765170a5bc88c46e1e8bde9b->leave($__internal_86f5bf9d0177a1ea55cd46fe410121a894719a09765170a5bc88c46e1e8bde9b_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ea8c2b057c5aa088acd8bf671ae94072ac74b7d2f115855f383ecbbfe6ac2bb2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ea8c2b057c5aa088acd8bf671ae94072ac74b7d2f115855f383ecbbfe6ac2bb2->enter($__internal_ea8c2b057c5aa088acd8bf671ae94072ac74b7d2f115855f383ecbbfe6ac2bb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_bfdcb26b4a8bca40fbbd56d2c433cde3ce6860f446ef3f443462b4b7c565f4fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bfdcb26b4a8bca40fbbd56d2c433cde3ce6860f446ef3f443462b4b7c565f4fd->enter($__internal_bfdcb26b4a8bca40fbbd56d2c433cde3ce6860f446ef3f443462b4b7c565f4fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    <h2 class=\"genus-name\">";
@@ -73,7 +73,7 @@ class __TwigTemplate_0a2cb09ffbe3d0cd328112b18f3f185c8b827b55479be0160c54ddb5ed1
                 <dt>Fun Fact:</dt>
                 <dd>";
         // line 17
-        echo twig_escape_filter($this->env, (isset($context["funFact"]) ? $context["funFact"] : $this->getContext($context, "funFact")), "html", null, true);
+        echo $this->env->getExtension('Knp\Bundle\MarkdownBundle\Twig\Extension\MarkdownTwigExtension')->markdown($this->getAttribute((isset($context["genus"]) ? $context["genus"] : $this->getContext($context, "genus")), "funFact", array()));
         echo "</dd>
                 <dt>Recent Notes</dt>
                 <dd>";
@@ -86,15 +86,15 @@ class __TwigTemplate_0a2cb09ffbe3d0cd328112b18f3f185c8b827b55479be0160c54ddb5ed1
     <div id=\"js-notes-wrapper\"></div>
 ";
         
-        $__internal_ea8c2b057c5aa088acd8bf671ae94072ac74b7d2f115855f383ecbbfe6ac2bb2->leave($__internal_ea8c2b057c5aa088acd8bf671ae94072ac74b7d2f115855f383ecbbfe6ac2bb2_prof);
+        $__internal_bfdcb26b4a8bca40fbbd56d2c433cde3ce6860f446ef3f443462b4b7c565f4fd->leave($__internal_bfdcb26b4a8bca40fbbd56d2c433cde3ce6860f446ef3f443462b4b7c565f4fd_prof);
 
     }
 
     // line 26
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_001c516d5b8db6e9678c628fe8f667b9ba7c6cd6978d284529c0c4617107085d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_001c516d5b8db6e9678c628fe8f667b9ba7c6cd6978d284529c0c4617107085d->enter($__internal_001c516d5b8db6e9678c628fe8f667b9ba7c6cd6978d284529c0c4617107085d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_518ff617fb4425b61e07d5251aba400cde3ea08a2822b6405ce6ddbdce5b9586 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_518ff617fb4425b61e07d5251aba400cde3ea08a2822b6405ce6ddbdce5b9586->enter($__internal_518ff617fb4425b61e07d5251aba400cde3ea08a2822b6405ce6ddbdce5b9586_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 27
         echo "    ";
@@ -121,7 +121,7 @@ class __TwigTemplate_0a2cb09ffbe3d0cd328112b18f3f185c8b827b55479be0160c54ddb5ed1
     </script>
 ";
         
-        $__internal_001c516d5b8db6e9678c628fe8f667b9ba7c6cd6978d284529c0c4617107085d->leave($__internal_001c516d5b8db6e9678c628fe8f667b9ba7c6cd6978d284529c0c4617107085d_prof);
+        $__internal_518ff617fb4425b61e07d5251aba400cde3ea08a2822b6405ce6ddbdce5b9586->leave($__internal_518ff617fb4425b61e07d5251aba400cde3ea08a2822b6405ce6ddbdce5b9586_prof);
 
     }
 
@@ -158,7 +158,7 @@ class __TwigTemplate_0a2cb09ffbe3d0cd328112b18f3f185c8b827b55479be0160c54ddb5ed1
                 <dt>Known Species:</dt>
                 <dd>{{ genus.speciesCount|number_format }}</dd>
                 <dt>Fun Fact:</dt>
-                <dd>{{ funFact }}</dd>
+                <dd>{{ genus.funFact|markdown }}</dd>
                 <dt>Recent Notes</dt>
                 <dd>{{ recentNoteCount }}</dd>
             </dl>
