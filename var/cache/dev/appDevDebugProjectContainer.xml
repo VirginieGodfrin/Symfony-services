@@ -38,6 +38,7 @@
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">c98717e58aef67c3b16ef01d2582db85812757c1</parameter>
     <parameter key="locale">en</parameter>
+    <parameter key="cache_type">file_system</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">c98717e58aef67c3b16ef01d2582db85812757c1</parameter>
@@ -382,6 +383,10 @@
     </parameter>
   </parameters>
   <services>
+    <service id="app.markdown_transformer" class="AppBundle\Service\MarkdownTransformer">
+      <argument type="service" id="markdown.parser"/>
+      <argument type="service" id="doctrine_cache.providers.my_markdown_cache"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -497,7 +502,7 @@
                   <tag name="cache.pool"/>
                   <argument>kC68sTBymT</argument>
                   <argument>0</argument>
-                  <argument>kkmMitXnzA6RvWbGGhWIAg</argument>
+                  <argument>dYoEKML1ytzlfQqVaOgHxQ</argument>
                   <argument>/Applications/MAMP/htdocs/symfo_services/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -510,7 +515,7 @@
                   <tag name="cache.pool"/>
                   <argument>35lw6bgHad</argument>
                   <argument>0</argument>
-                  <argument>kkmMitXnzA6RvWbGGhWIAg</argument>
+                  <argument>dYoEKML1ytzlfQqVaOgHxQ</argument>
                   <argument>/Applications/MAMP/htdocs/symfo_services/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -842,7 +847,7 @@
       <tag name="cache.pool"/>
       <argument>+ZEoO+JfOB</argument>
       <argument>0</argument>
-      <argument>kkmMitXnzA6RvWbGGhWIAg</argument>
+      <argument>dYoEKML1ytzlfQqVaOgHxQ</argument>
       <argument>/Applications/MAMP/htdocs/symfo_services/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1578,7 +1583,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>580e7bc8b237e0.78445009</argument>
+            <argument>580fa2d5bd4580.90687807</argument>
           </service>
         </argument>
       </argument>
@@ -1712,7 +1717,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>580e7bc8b237e0.78445009</argument>
+            <argument>580fa2d5bd4580.90687807</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2227,6 +2232,11 @@
       <argument type="service" id="security.role_hierarchy" on-invalid="null"/>
       <argument type="service" id="security.token_storage" on-invalid="null"/>
       <argument type="service" id="security.authorization_checker" on-invalid="null"/>
+    </service>
+    <service id="doctrine_cache.providers.my_markdown_cache" class="Doctrine\Common\Cache\FilesystemCache">
+      <argument>/Applications/MAMP/htdocs/symfo_services/var/cache/dev/markdown_cache</argument>
+      <argument>null</argument>
+      <argument>2</argument>
     </service>
     <service id="markdown.parser.parser_manager" class="Knp\Bundle\MarkdownBundle\Parser\ParserManager" public="false">
       <call method="addParser">
