@@ -30,6 +30,7 @@ return array(
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'Nelmio\\Alice\\' => array($vendorDir . '/nelmio/alice/src/Nelmio/Alice'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Knp\\Bundle\\MarkdownBundle\\' => array($vendorDir . '/knplabs/knp-markdown-bundle'),
     'Incenteev\\ParameterHandler\\' => array($vendorDir . '/incenteev/composer-parameter-handler'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),

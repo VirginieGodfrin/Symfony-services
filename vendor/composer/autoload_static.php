@@ -60,6 +60,10 @@ class ComposerStaticInit2bacd54528de0599260d3905a1eaec01
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\MarkdownBundle\\' => 26,
+        ),
         'I' => 
         array (
             'Incenteev\\ParameterHandler\\' => 27,
@@ -178,6 +182,10 @@ class ComposerStaticInit2bacd54528de0599260d3905a1eaec01
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Bundle\\MarkdownBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-markdown-bundle',
+        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -244,6 +252,13 @@ class ComposerStaticInit2bacd54528de0599260d3905a1eaec01
             'ProxyManager\\' => 
             array (
                 0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+        ),
+        'M' => 
+        array (
+            'Michelf' => 
+            array (
+                0 => __DIR__ . '/..' . '/michelf/php-markdown',
             ),
         ),
         'D' => 
